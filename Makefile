@@ -15,7 +15,10 @@ phonebook_opt: $(SRCS_common) phonebook_opt.c phonebook_opt.h
 		$(SRCS_common) $@.c
 
 run: $(EXEC)
-	watch -d -t ./phonebook_orig
+#	watch -d -t ./phonebook_orig
+#	watch -d -t ./phonebook_opt
+	 perf stat -r 10 -e cache-misses,cache-references,L1-dcache-load-misses,L1-dcache-store-misses,L1-dcache-prefetch-misses,L1-icache-load-misses ./phonebook_orig
+	 perf stat -r 10 -e cache-misses,cache-references,L1-dcache-load-misses,L1-dcache-store-misses,L1-dcache-prefetch-misses,L1-icache-load-misses ./phonebook_opt
 
 clean:
 	$(RM) $(EXEC) *.o perf.*

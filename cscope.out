@@ -1,0 +1,985 @@
+cscope 15 $HOME/phonebook -q 0000000073 0000004746
+	@dictionary/tolowercase.c
+
+1 
+	~<°dio.h
+>
+
+2 
+	~<°dlib.h
+>
+
+3 
+	~<°rög.h
+>
+
+4 
+	~<˘y≥.h
+>
+
+6 
+	$maö
+(
+¨gc
+, c⁄° *
+¨gv
+[])
+
+8 
+FILE
+ *
+Â1
+, *
+Â2
+;
+
+9 
+löe
+[16];
+
+12 
+Â1
+ = 
+	`f›í
+("./all-names.txt", "r");
+
+13 i‡(
+Â1
+ =
+NULL
+){
+
+14 
+	`¥ötf
+("cannot open ./all-names.txt\n");
+
+17 
+Â2
+ = 
+	`f›í
+("./all-names2.txt", "a");
+
+19 
+i
+ = 0;
+
+20 
+	`fgës
+(
+löe
+, ÷öe), 
+Â1
+Ë!
+NULL
+){
+
+21 ((
+löe
+[
+i
+]>='a'&&line[i]<='z') || (line[i]>='A'&&line[i]<='Z'))){
+
+22 
+i
+++;
+
+24 
+löe
+[
+i
+]='\0';
+
+25 
+löe
+[0] = 
+	`tﬁowî
+(line[0]);
+
+26 
+	`fwrôe
+(
+löe
+, (), 
+i
+, 
+Â2
+);
+
+27 
+	`putc
+('\n',
+Â2
+);
+
+28 
+i
+ = 0;
+
+31 
+	`f˛o£
+(
+Â1
+);
+
+32 
+	`f˛o£
+(
+Â2
+);
+
+35 
+	}
+}
+
+	@main.c
+
+1 
+	~<°dio.h
+>
+
+2 
+	~<°dlib.h
+>
+
+3 
+	~<°rög.h
+>
+
+4 
+	~<time.h
+>
+
+5 
+	~<as£π.h
+>
+
+7 #ö˛udê
+IMPL
+
+
+9 
+	#DICT_FILE
+ "./di˘i⁄¨y/w‹ds.txt"
+
+	)
+
+11 
+	$diff_ö_£c⁄d
+(
+time•ec
+ 
+t1
+, time•e¯
+t2
+)
+
+13 
+time•ec
+ 
+diff
+;
+
+14 i‡(
+t2
+.
+tv_n£c
+-
+t1
+.tv_nsec < 0) {
+
+15 
+diff
+.
+tv_£c
+ = 
+t2
+.tv_£¯- 
+t1
+.tv_sec - 1;
+
+16 
+diff
+.
+tv_n£c
+ = 
+t2
+.tv_n£¯- 
+t1
+.tv_nsec + 1000000000;
+
+18 
+diff
+.
+tv_£c
+ = 
+t2
+.tv_£¯- 
+t1
+.tv_sec;
+
+19 
+diff
+.
+tv_n£c
+ = 
+t2
+.tv_n£¯- 
+t1
+.tv_nsec;
+
+21  (
+diff
+.
+tv_£c
+ + diff.
+tv_n£c
+ / 1000000000.0);
+
+22 
+	}
+}
+
+24 
+	$maö
+(
+¨gc
+, *
+¨gv
+[])
+
+26 
+FILE
+ *
+Â
+;
+
+27 
+i
+ = 0;
+
+28 
+löe
+[
+MAX_LAST_NAME_SIZE
+];
+
+29 
+time•ec
+ 
+°¨t
+, 
+íd
+;
+
+30 
+˝u_time1
+, 
+˝u_time2
+;
+
+33 
+Â
+ = 
+	`f›í
+(
+DICT_FILE
+, "r");
+
+34 i‡(
+Â
+ =
+NULL
+) {
+
+35 
+	`¥ötf
+("cannot openÅhe file\n");
+
+40 
+íåy
+ *
+pHód
+, *
+e
+;
+
+41 
+pHód
+ = (
+íåy
+ *Ë
+	`mÆloc
+((entry));
+
+42 
+	`¥ötf
+("sizêo‡íåy : %lu byãs\n", (
+íåy
+));
+
+43 
+e
+ = 
+pHód
+;
+
+44 
+e
+->
+pNext
+ = 
+NULL
+;
+
+46 #i‡
+	`deföed
+(
+__GNUC__
+)
+
+47 
+	`__buûtö___˛ór_ˇche
+((*Ë
+pHód
+, (*ËpHód + (
+íåy
+));
+
+49 
+	`˛ock_gëtime
+(
+CLOCK_REALTIME
+, &
+°¨t
+);
+
+50 
+	`fgës
+(
+löe
+, ÷öe), 
+Â
+)) {
+
+51 
+löe
+[
+i
+] != '\0')
+
+52 
+i
+++;
+
+53 
+löe
+[
+i
+ - 1] = '\0';
+
+54 
+i
+ = 0;
+
+55 
+e
+ = 
+	`≠≥nd
+(
+löe
+,É);
+
+57 
+	`˛ock_gëtime
+(
+CLOCK_REALTIME
+, &
+íd
+);
+
+58 
+˝u_time1
+ = 
+	`diff_ö_£c⁄d
+(
+°¨t
+, 
+íd
+);
+
+61 
+	`f˛o£
+(
+Â
+);
+
+63 
+e
+ = 
+pHód
+;
+
+66 
+öput
+[
+MAX_LAST_NAME_SIZE
+] = "zyxel";
+
+67 
+e
+ = 
+pHód
+;
+
+69 
+	`as£π
+(
+	`födName
+(
+öput
+, 
+e
+) &&
+
+70 "Did you im∂emíàfödName(Ëö " 
+IMPL
+ "?");
+
+71 
+	`as£π
+(0 =
+	`°rcmp
+(
+	`födName
+(
+öput
+, 
+e
+)->
+œ°Name
+, "zyxel"));
+
+73 #i‡
+	`deföed
+(
+__GNUC__
+)
+
+74 
+	`__buûtö___˛ór_ˇche
+((*Ë
+pHód
+, (*ËpHód + (
+íåy
+));
+
+77 
+	`˛ock_gëtime
+(
+CLOCK_REALTIME
+, &
+°¨t
+);
+
+78 
+	`födName
+(
+öput
+, 
+e
+);
+
+79 
+	`˛ock_gëtime
+(
+CLOCK_REALTIME
+, &
+íd
+);
+
+80 
+˝u_time2
+ = 
+	`diff_ö_£c⁄d
+(
+°¨t
+, 
+íd
+);
+
+82 
+	`¥ötf
+("executi⁄Åimêo‡≠≥nd(Ë: %l‡£c\n", 
+˝u_time1
+);
+
+83 
+	`¥ötf
+("executi⁄Åimêo‡födName(Ë: %l‡£c\n", 
+˝u_time2
+);
+
+86 
+	`‰ì
+(
+pHód
+);
+
+89 
+	}
+}
+
+	@phonebook_opt.c
+
+1 
+	~<°dio.h
+>
+
+2 
+	~<°dlib.h
+>
+
+3 
+	~<°rög.h
+>
+
+4 
+	~<˘y≥.h
+>
+
+6 
+	~"ph⁄ebook_›t.h
+"
+
+9 
+íåy
+ *
+	$födName
+(
+œ°«me
+[], 
+íåy
+ *
+pHód
+)
+
+11 
+pHód
+ !
+NULL
+) {
+
+12 i‡(
+	`°rˇ£cmp
+(
+œ°«me
+, 
+pHód
+->
+œ°Name
+) == 0)
+
+13  
+pHód
+;
+
+14 
+pHód
+ =ÖHód->
+pNext
+;
+
+16  
+NULL
+;
+
+17 
+	}
+}
+
+19 
+íåy
+ *
+	$≠≥nd
+(
+œ°Name
+[], 
+íåy
+ *
+e
+)
+
+22 
+e
+->
+pNext
+ = (
+íåy
+ *Ë
+	`mÆloc
+((entry));
+
+23 
+e
+ =É->
+pNext
+;
+
+24 
+	`°r˝y
+(
+e
+->
+œ°Name
+,ÜastName);
+
+25 
+e
+->
+pNext
+ = 
+NULL
+;
+
+27  
+e
+;
+
+28 
+	}
+}
+
+	@phonebook_opt.h
+
+1 #i‚de‡
+_PHONEBOOK_H
+
+
+2 
+	#_PHONEBOOK_H
+
+
+	)
+
+4 
+	#MAX_LAST_NAME_SIZE
+ 16
+
+	)
+
+7 
+	s__PHONE_BOOK_DETAIL
+ {
+
+8 
+	mfú°Name
+[16];
+
+9 
+	memaû
+[16];
+
+10 
+	mph⁄e
+[10];
+
+11 
+	m˚Œ
+[10];
+
+12 
+	maddr1
+[16];
+
+13 
+	maddr2
+[16];
+
+14 
+	mcôy
+[16];
+
+15 
+	m°©e
+[2];
+
+16 
+	mzù
+[5];
+
+17 } 
+	tdëaû
+;
+
+19 
+	s__PHONE_BOOK_ENTRY
+{
+
+20 
+	mœ°Name
+[
+MAX_LAST_NAME_SIZE
+];
+
+21 
+__PHONE_BOOK_ENTRY
+ *
+	mpNext
+;
+
+22 
+dëaû
+ *
+	mDëaû
+;
+
+23 }
+	tíåy
+;
+
+25 
+íåy
+ *
+födName
+(
+œ°«me
+[],É¡ry *
+pHód
+);
+
+26 
+íåy
+ *
+≠≥nd
+(
+œ°Name
+[],É¡ry *
+e
+);
+
+	@phonebook_orig.c
+
+1 
+	~<°dio.h
+>
+
+2 
+	~<°dlib.h
+>
+
+3 
+	~<°rög.h
+>
+
+4 
+	~<˘y≥.h
+>
+
+6 
+	~"ph⁄ebook_‹ig.h
+"
+
+9 
+íåy
+ *
+	$födName
+(
+œ°«me
+[], 
+íåy
+ *
+pHód
+)
+
+11 
+pHód
+ !
+NULL
+) {
+
+12 i‡(
+	`°rˇ£cmp
+(
+œ°«me
+, 
+pHód
+->
+œ°Name
+) == 0)
+
+13  
+pHód
+;
+
+14 
+pHód
+ =ÖHód->
+pNext
+;
+
+16  
+NULL
+;
+
+17 
+	}
+}
+
+19 
+íåy
+ *
+	$≠≥nd
+(
+œ°Name
+[], 
+íåy
+ *
+e
+)
+
+22 
+e
+->
+pNext
+ = (
+íåy
+ *Ë
+	`mÆloc
+((entry));
+
+23 
+e
+ =É->
+pNext
+;
+
+24 
+	`°r˝y
+(
+e
+->
+œ°Name
+,ÜastName);
+
+25 
+e
+->
+pNext
+ = 
+NULL
+;
+
+27  
+e
+;
+
+28 
+	}
+}
+
+	@phonebook_orig.h
+
+1 #i‚de‡
+_PHONEBOOK_H
+
+
+2 
+	#_PHONEBOOK_H
+
+
+	)
+
+4 
+	#MAX_LAST_NAME_SIZE
+ 16
+
+	)
+
+7 
+	s__PHONE_BOOK_ENTRY
+ {
+
+8 
+	mœ°Name
+[
+MAX_LAST_NAME_SIZE
+];
+
+9 
+	mfú°Name
+[16];
+
+10 
+	memaû
+[16];
+
+11 
+	mph⁄e
+[10];
+
+12 
+	m˚Œ
+[10];
+
+13 
+	maddr1
+[16];
+
+14 
+	maddr2
+[16];
+
+15 
+	mcôy
+[16];
+
+16 
+	m°©e
+[2];
+
+17 
+	mzù
+[5];
+
+18 
+__PHONE_BOOK_ENTRY
+ *
+	mpNext
+;
+
+19 } 
+	tíåy
+;
+
+21 
+íåy
+ *
+födName
+(
+œ°«me
+[],É¡ry *
+pHód
+);
+
+22 
+íåy
+ *
+≠≥nd
+(
+œ°Name
+[],É¡ry *
+e
+);
+
+	@
+1
+.
+0
+6
+98
+dictionary/tolowercase.c
+main.c
+phonebook_opt.c
+phonebook_opt.h
+phonebook_orig.c
+phonebook_orig.h
