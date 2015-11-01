@@ -15,17 +15,16 @@ typedef struct __PHONE_BOOK_DETAIL {
     char city[16];
     char state[2];
     char zip[5];
+    struct __PHONE_BOOK_DETAIL *next;
 } detail;
 
 typedef struct __PHONE_BOOK_ENTRY{
-    char lastName[MAX_LAST_NAME_SIZE];
-    struct __PHONE_BOOK_ENTRY *pNext_left;
-    struct __PHONE_BOOK_ENTRY *pNext_right;
-    struct __PHONE_BOOK_DETAIL *detail;
-}entry;
+    detail *data;
+} entry;
 
-entry *findName(char lastname[], entry *pHead);
-void append(char lastName[], entry *e);
+unsigned int hash(char *ptr);
+detail *findName(char lastname[], entry *pHead);
+entry *append(char lastName[], entry *pHead);
 
 #endif
 

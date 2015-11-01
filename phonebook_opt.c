@@ -11,7 +11,7 @@ entry *findName(char lastname[], entry *pHead)
     while (pHead != NULL) {
         if (strcasecmp(lastname, pHead->lastName) == 0)
             return pHead;
-        else if(strlen(lastname)>=strlen(pHead->lastName)){
+        else if(strcmp(pHead->lastName,lastname)/5>1){
             pHead=pHead->pNext_right;
         }
         else{
@@ -21,7 +21,7 @@ entry *findName(char lastname[], entry *pHead)
     return NULL;
 }
 
-entry *append(char lastName[], entry *pHead)
+void append(char lastName[], entry *pHead)
 {
     entry *root = pHead;
     if(root==NULL){
@@ -29,9 +29,10 @@ entry *append(char lastName[], entry *pHead)
         root->pNext_left=NULL;
         root->pNext_right=NULL;
         strcpy(root->lastName,lastName);
+        return;
     }
     while(root!=NULL){
-        if(strlen(lastName)>=strlen(root->lastName)){
+        if(strcmp(root->lastName,lastName)/5>1){
             if(root->pNext_right!=NULL){
                 root=root->pNext_right;
             }
@@ -41,7 +42,8 @@ entry *append(char lastName[], entry *pHead)
                 strcpy(root->lastName,lastName);
                 root->pNext_right=NULL;
                 root->pNext_left=NULL;
-                return pHead;
+                return;
+//                return pHead;
             }
         }
         else{
@@ -54,10 +56,12 @@ entry *append(char lastName[], entry *pHead)
                 strcpy(root->lastName,lastName);
                 root->pNext_right=NULL;
                 root->pNext_left=NULL;
-                return pHead;
+                return;
+ //               return pHead;
             }
         }
     }
-    return pHead;
+    return;
+ //   return pHead;
 }
 
